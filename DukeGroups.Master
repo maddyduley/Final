@@ -1,0 +1,127 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="DukeGroups.master.cs" Inherits="Lab_1_.DukeGroups" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Ole School</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+<style type="text/css">
+        #OrgName{
+            color: mediumpurple;
+            font-weight:700;
+            background-color:white;
+            border:none;
+            margin-left: 2px;
+        }
+        body{
+            background-color: white;
+        }
+        #bttnHome, #bttnMission, #bttnEvent, #bttnWinner, #bttnDonate{
+            color:#450084;
+            background-color: #CBB677;
+            margin-left: 7%;
+            margin-right: 7%;
+        }
+        #Login{
+                        margin-left: 10%;
+            margin-right: 10%;
+        }
+        #Bttns{
+            background-color: white;
+            border-color:white;
+            height:10%;
+            border-style:groove;
+        }
+        .paragraph
+        {
+            padding-left: 10%;
+            padding-right: 10%;
+        }
+        .contact{
+            display: inline;
+            
+        }
+        #Logout{
+            float:right;
+            margin-right:10%;
+        }
+        .topbuttons{
+            color:#450084;
+            background-color: #CBB677;
+            margin-right:10%;
+            margin-left:10%;
+        }
+        .rightbuttons{
+            border-radius:12px;
+            color:#450084;
+            background-color: #CBB677;
+            margin-right:5%;
+        }
+        .rightside{
+            float:right;
+            margin-right:10%;
+            margin-top:5%;
+        }
+        .center{
+            display:flex;
+            justify-content:center;
+        }
+        .texts{
+            text-align:left;
+            text-wrap:normal;
+            vertical-align:top;
+        }
+
+    </style>
+</head>
+<body>
+    <form id="OverView" runat="server">
+        <asp:ImageButton ID="HomePage" runat="server" src="OleSchoolLogo.png" OnClick="HomePage_Click" Width="495px" Height="202px" />
+
+
+
+                    <br />
+        <br />
+
+
+
+                    <asp:Button ID="bttnHome" runat="server" Text="Home" OnClick="bttnHome_Click" CausesValidation="false" />
+
+
+
+                    <asp:Button ID="bttnMission" runat="server" Text="Mission" OnClick="bttnMission_Click" CausesValidation="false" />
+
+                    <asp:Button ID="bttnEvent" runat="server" Text="Events" OnClick="bttnEvent_Click" CausesValidation="false" />
+
+                    <asp:Button ID="bttnWinner" runat="server" Text="Award Winners" OnClick="bttnWinner_Click" CausesValidation="false" />
+
+                    <asp:Button ID="bttnDonate" runat="server" Text="Donations" OnClick="bttnDonate_Click" CausesValidation="false" />
+
+
+
+
+        <br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="lblUserStatus" runat="server" Text=""></asp:Label>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <br />
+                        <asp:Button ID="Logout" runat="server" OnClick="Logout_Click" Text="Logout" CausesValidation="false" />
+                        <asp:Button ID="Login" runat="server" OnClick="Login_Click" Text="Login" CausesValidation="false"  />
+                         <br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:Button ID="bttnDash" runat="server" Text="Dashboard" Onclick="bttnDash_Click" CausesValidation="false"/>
+&nbsp;&nbsp;
+                        <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        
+            
+    </form>
+
+
+</body>
+</html>
+
